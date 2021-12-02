@@ -1,4 +1,5 @@
 body, html {
+    /* body size config  */
     min-height: 100vh;
     max-height: 100vh;
     min-width: 100vw;
@@ -8,24 +9,35 @@ body, html {
 }
 
 body {
+  /* body background image config , covering the page without any reapted img . */
   background-image: url('./imgs/angryimg.png');
   background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
+   /* set align items , children of body tag to center  */
    align-items: center;
    align-self: center;
    justify-content: center;
+   /* config the font */
    font-family: 'Tahoma', sans-serif;
+   /* if user's broswer size is smaller than fixed minimum height , then show scroll */
    overflow-y: scroll;
 }
 
 h1 {
+  /* config h1 color and add sum space from lef (margin ) */
   color: navy;
   margin-left: 20px;
 }
 
 
 .main-container{
+  /* container that contains the main box class.
+set flex display so use the functionality of it .
+flex-direction , wrap  is not necessary here because we have just one div as child
+set width and height to 100vh,100vw
+no functionality this class has just to seprate box parent from body ,its wrote it like this.
+   */
     border: none;
     margin: 0px;
     display: flex;
@@ -38,21 +50,41 @@ h1 {
 
 }
 .main_box{
+  /* this is the window in middle of the page style config
+set text color to white
+set height fitting to content and set the position in middle of parent
+
+
+   */
   color: white;
   height: fit-content;
   align-self: center;
+/* set colors config and radius for box . */
+  background: rgba(152, 152, 147,0.3);
+  box-shadow: 0 0 50px rgb(2 78 231 / 50%);
+  border: solid black 2px;
+  border-radius: 10px;
+
+  /* the dive is flex container again and has it own children
+  at first set the children align to center
+  then set row direction for content
+   */
+  justify-items: center;
+  align-content: center;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  background: rgba(152, 152, 147,0.3);
-  box-shadow: 0 0 50px rgb(2 78 231 / 50%);
-  border: solid black 2px;
-  border-radius: 10px;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
+
+/* padding and margin config +
+setting width to 50% . this property makes it look in midde from both right and left side
+setting min width so the content items style would not cross the lines (works at chrome correctly)
+
+set z index to 0 (sendig it to back of items ).
+*/
+
   padding: 5px;
   margin-top: 25vh;
   font-size: 18px;
@@ -61,15 +93,21 @@ h1 {
   z-index: 0;
 
 
-
-
 }
+
+
 .box{
+/* the window contains to boxes , first request and second the saved_result
+but to boxes in two columns can have lots of property in common . so there  have same
+class for each of them.
+in this class spaces from parent (margin) and from children  (padding)
+and even border between this two has been configed.
+set width of each boxes to 48 perc of parent container .
+ */
   margin: 2px;
   padding: 2px;
   border: solid rgba(0,0,0,0.2) 2px;
   border-radius: 10px;
-  grid-gap: 2px;
   height: 100%;
   width:   48%;
   opacity: 1;
@@ -78,12 +116,15 @@ h1 {
   min-width: 200px;
 }
 .right-container{
+  /* the right container class is prediction side style sheet part .
+  becuase the direction of flex part here needs to be change so its specified here . */
   display: flex;
   flex-direction: column;
 }
 
 
 .cookie-box{
+  /* saved answer box of image config  */
   margin: 1px;
   border-radius: 20px;
   border: dashed rgba(255, 255, 255, 0.5);
@@ -91,13 +132,15 @@ h1 {
   flex-direction: column;
  justify-content: center;
  align-items: center;
-
+/* flex-grow makes the dive to not be fitted to content but resize as much as height,
+the parent conatainer has left as space . */
   flex-grow: 1;
   padding-left: 10px;
   text-align: center;
 }
 
 #name_text{
+  /* input text style sheet . */
     border-radius:12px;
     width: 75%;
     height: 30px;
@@ -132,6 +175,7 @@ h1 {
 }
 #save-btn:disabled,
 #save-btn[disabled]{
+  /* change the defualt disabled css config of button . */
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
