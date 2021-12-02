@@ -4,7 +4,7 @@
 <title>Page Title</title>
 <link rel="stylesheet" href="./styles/main.css">
 <link rel="stylesheet" href="./styles/responsive.css">
-
+ <script src="./scripts/main.js"></script>
 </head>
 <body >
 <div class='main-container'>
@@ -13,26 +13,26 @@
     <h1>
       Mr. Or Ms. ?
     </h1>
-    <form style="margin-left:20px;">
+    <form style="margin-left:20px;" >
       <label for="name" style="font-weight:bold;"><em>Name: </em></label>
-      <input type="text"  id="name_text" name="" value="">
+      <input type="text"  id="name_text" name="" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)">
       <br>
       <p style="font-weight:bold;" ><em>gender:</em></p>
 
-      <input type="radio" id="male_radio" name="gender" value="male">
+      <input type="radio" id="male_radio" onclick="radioHandler()" name="gender" value="male">
       <label for="male_radio">male</label><br>
 
       <br>
 
-      <input type="radio" id="felmale_radio" name="gender" value="female">
-      <label for="felmale_radio">female</label><br>
+      <input type="radio" id="female_radio" onclick="radioHandler()" name="gender" value="female">
+      <label for="female_radio">female</label><br>
       <br>
       <br>
 
-      <input type="button" value="submit" id="submit-btn">
+      <input type="button" value="submit" id="submit-btn" onclick="predict()">
       <br>
       <br>
-      <input type="button" value="save" id="save-btn">
+      <input type="button" value="save" disabled id="save-btn" onclick="saveC()">
       <br>
 
     </form>
@@ -45,15 +45,17 @@
       Prediction
     </h1>
     <dl>
-      <dd> Male or Female</dd>
+      <dd ><span id='gender-prediction'> Male or Female</span></dd>
       <br>
-      <dd> 0.0</dd>
+      <dd > <span id='probability-prediction' >0.0 </span></dd>
   </dl>
 
 </div>
     <div class="cookie-box">
       <h2>Saved Answer</h2>
-      <input type="button" value="clear" id="clear-btn">
+
+      <p id=saved_result>-</p>
+      <input type="button" value="clear" onclick="clearC()" id="clear-btn">
 
     </div>
 

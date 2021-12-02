@@ -84,6 +84,8 @@ h1 {
 
 
 .cookie-box{
+  margin: 1px;
+  border-radius: 20px;
   border: dashed rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
@@ -99,13 +101,13 @@ h1 {
     border-radius:12px;
     width: 75%;
     height: 30px;
-    background-color: rgba(171,196,255,1);
+    background-color: rgba(203, 231, 243, 1);
     font-size: 20px;
 }
 
 
+
 #submit-btn{
-  background: rgba(52, 160, 164,0.5);
   background: navy;
   color:white;
   margin-left: 10px;
@@ -118,7 +120,6 @@ h1 {
 }
 
 #save-btn{
-  background: rgba(52, 160, 164,0.5);
   background: navy;
   color:white;
   margin-left: 10px;
@@ -128,6 +129,12 @@ h1 {
   left: 20%;
   text-align: center;
   border-radius: 10px;
+}
+#save-btn:disabled,
+#save-btn[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
 #clear-btn{
   background: rgba(52, 160, 164,0.5);
