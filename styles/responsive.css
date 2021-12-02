@@ -1,0 +1,11 @@
+@media only screen and (max-aspect-ratio: 16/11) {
+    body {
+        overflow: auto;
+
+    }
+    
+
+    .main-container {
+        flex-direction: column;
+    }
+}

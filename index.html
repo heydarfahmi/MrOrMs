@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="./styles/main.css">
+<link rel="stylesheet" href="./styles/responsive.css">
+
+</head>
+<body >
+<div class='main-container'>
+<div class='main_box'>
+  <div class='box left-container'>
+    <h1>
+      Mr. Or Ms. ?
+    </h1>
+    <form style="margin-left:20px;">
+      <label for="name" style="font-weight:bold;"><em>Name: </em></label>
+      <input type="text"  id="name_text" name="" value="">
+      <br>
+      <p style="font-weight:bold;" ><em>gender:</em></p>
+
+      <input type="radio" id="male_radio" name="gender" value="male">
+      <label for="male_radio">male</label><br>
+
+      <br>
+
+      <input type="radio" id="felmale_radio" name="gender" value="female">
+      <label for="felmale_radio">female</label><br>
+      <br>
+      <br>
+
+      <input type="button" value="submit" id="submit-btn">
+      <br>
+      <br>
+      <input type="button" value="save" id="save-btn">
+      <br>
+
+    </form>
+
+
+  </div>
+  <div class='box right-container'>
+    <div class='prediction-result'>
+    <h1>
+      Prediction
+    </h1>
+    <dl>
+      <dd> Male or Female</dd>
+      <br>
+      <dd> 0.0</dd>
+  </dl>
+
+</div>
+    <div class="cookie-box">
+      <h2>Saved Answer</h2>
+      <input type="button" value="clear" id="clear-btn">
+
+    </div>
+
+
+
+  </div>
+</div>
+</div>
+</body>
+</html>
